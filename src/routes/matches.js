@@ -31,7 +31,7 @@ matchRouter.get("/", async (req, res) => {
   if (err) {
     return res.status(500).json({
       error: "Failed to list matches.",
-      detail: JSON.stringify(parsed.error),
+      detail: JSON.stringify(err),
     });
   }
 
@@ -40,15 +40,14 @@ matchRouter.get("/", async (req, res) => {
 
 matchRouter.post("/", async (req, res) => {
   const parsed = createMatchSchema.safeParse(req.body);
-  const {
-    data: { startTime, endTime, homeScore, awayScore },
-  } = parsed;
 
   if (!parsed.success) {
     return res
       .status(400)
       .json({ error: "Invalid payload", detail: JSON.stringify(parsed.error) });
   }
+
+  const { startTime, endTime, homeScore, awayScore } = parsed.data;
 
   const [err, event] = await to(
     db
