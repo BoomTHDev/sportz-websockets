@@ -9,8 +9,8 @@ export function getMatchStatus(startTime, endTime, now = new Date()) {
   const end = new Date(endTime);
 
   if (
-    Number.isNan(start.getTime()) ||
-    Number.isNan(end.getTime()) ||
+    Number.isNaN(start.getTime()) ||
+    Number.isNaN(end.getTime()) ||
     end <= start
   ) {
     return null;
