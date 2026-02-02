@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "sportz-websocket",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
