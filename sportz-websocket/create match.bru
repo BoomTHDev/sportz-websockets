@@ -1,0 +1,26 @@
+meta {
+  name: create match
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/matches
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sport": "Cricket",
+    "homeTeam": "India",
+    "awayTeam": "England",
+    "startTime": "2026-02-01T12:00:00.000Z",
+    "endTime": "2026-02-01T13:45:00.000Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -18,9 +18,13 @@
     "@dotenvx/dotenvx": "^1.52.0",
     "@neondatabase/serverless": "^1.0.2",
     "drizzle-orm": "^0.45.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "lyney": "^2.0.2",
+    "pg": "^8.18.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/pg": "^8.16.0",
     "drizzle-kit": "^0.31.8",
     "tsx": "^4.21.0",
